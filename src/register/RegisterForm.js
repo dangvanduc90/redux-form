@@ -2,6 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from './validate'
 import asyncValidate from './asyncValidate'
+import Button from 'common/Button';
 import './../_colors.scss';
 
 const renderField = ({
@@ -42,6 +43,7 @@ const AsyncValidationForm = props => {
         <button type="button" disabled={pristine || submitting} onClick={reset}>
           Clear Values
         </button>
+        <Button />
       </div>
     </form>
   )
