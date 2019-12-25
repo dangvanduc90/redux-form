@@ -11,6 +11,7 @@ class register extends Component {
 
   handleSubmit(values) {
     // handle data after pass validate
+    console.log(values)
   }
 
   render() {
