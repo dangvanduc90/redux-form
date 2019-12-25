@@ -2,6 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from './validate'
 import asyncValidate from './asyncValidate'
+import './../_colors.scss';
 
 const renderField = ({
   input,
@@ -9,14 +10,14 @@ const renderField = ({
   type,
   meta: { asyncValidating, touched, error }
 }) => (
-  <div>
-    <label>{label}</label>
-    <div className={asyncValidating ? 'async-validating' : ''}>
-      <input {...input} type={type} placeholder={label} />
-      {touched && error && <span>{error}</span>}
+    <div>
+      <label>{label}</label>
+      <div className={asyncValidating ? 'async-validating' : ''}>
+        <input {...input} type={type} placeholder={label} />
+        {touched && error && <span>{error}</span>}
+      </div>
     </div>
-  </div>
-)
+  )
 
 const AsyncValidationForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
