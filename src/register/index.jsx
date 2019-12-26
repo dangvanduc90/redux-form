@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Helmet from 'react-helmet';
 
 import RegisterForm from './RegisterForm';
 
@@ -16,9 +17,12 @@ class register extends Component {
 
   render() {
     return (
-      <RegisterForm
-        onSubmit={this.handleSubmit}
-      />
+      <Fragment>
+        <Helmet title="Login" />
+        <RegisterForm
+          onSubmit={this.handleSubmit}
+        />
+      </Fragment>
     );
   }
 }
